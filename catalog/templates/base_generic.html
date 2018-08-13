@@ -28,9 +28,10 @@
         {% endif %}
      <hr>
        <!-- {% if user.is_staff %}-->
+          {% if perms.catalog.can_mark_returned %}
           Staff
           <li><a href="{% url 'borrowed-detail' %}">All borrowed</a></li> 
-       <!-- {% endif %}-->
+          {% endif %}
      </ul>
       
      {% endblock %}

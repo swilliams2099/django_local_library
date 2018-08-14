@@ -148,3 +148,13 @@ STATIC_URL = '/static/'
 # Simplified static file serving. (Reduced file size)
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Redirect all non-https requests to https
+
+SECURE_SSL_REDIRECT = True
+
+# Cookies only sent under an HTTPS connection
+
+SESSION_COOKIE_SECURE = True
+
+CSRF_COOKIE_SECURE = True 
